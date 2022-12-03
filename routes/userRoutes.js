@@ -1,27 +1,13 @@
 const express = require('express');
+const { Signup, Login } = require('../controllers/userControllers');
 const router = express.Router();
 
 
 
-router.post("/Signup" , (req,res) => {
-    try {
-        
-        return res.send("Signup");
-
-    } catch (error) {
-        console.log(error);
-    }
-})
+router.post("/Signup" , Signup)  //here i have used controllers without "" wala hmne yaha functionality na dal ke 
+                                 //usercontrollers me dali hai 
 
 
-router.post("/Login" , (req,res) => {
-    try {
-        
-        return res.send("Login");
-
-    } catch (error) {
-        console.log(error);
-    }
-})
+router.post("/Login" , Login )  //here i have used controllers without "" wala 
 
 module.exports = router
