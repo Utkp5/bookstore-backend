@@ -8,6 +8,9 @@ const PORT = 5000;
 const routes = require("../routes/userRoutes")
 app.use("/api",routes)
 
+const dbConfig = require("../service/dbConfig");
+dbConfig();
+
 
 //testing
 app.get("/" , function (req,res) {
